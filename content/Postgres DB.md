@@ -1,0 +1,1 @@
+PostgreSQL is een Object-relationele database
