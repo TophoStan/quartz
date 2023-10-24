@@ -1,1 +1,0 @@
-React is een Single Page Application (SPA) zoals [[Angular]] en [[Vue.js]]. 

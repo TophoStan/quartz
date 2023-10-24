@@ -1,1 +1,0 @@
-ThreeJS is een 3d library voor het bouwen van 3D scenes. 
