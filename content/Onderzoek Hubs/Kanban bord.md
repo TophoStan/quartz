@@ -6,19 +6,21 @@ kanban-plugin: basic
 
 ## Backlog
 
-- [ ] Package onderzoek
-- [ ] Quartz
 - [ ] Diagram architectuur Hubs
-- [ ] Custom image hubs deployment
+- [ ] Migratie onderzoek
 
 
 ## Todo
 
+- [ ] Package onderzoek
+- [ ] Custom image deployment documentatie
 
 
 ## Finished
 
 - [ ] Vragen opstellen Albert Packages
+- [ ] Custom image hubs deployment
+- [ ] Quartz
 
 
 

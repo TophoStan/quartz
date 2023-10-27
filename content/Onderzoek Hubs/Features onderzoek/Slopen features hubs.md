@@ -144,7 +144,7 @@ toolbarCenter={
 
 Maar als je bijvoorbeeld de chat knop weghaald is het nog niet afgelopen, want er zijn nog keyboard shortcuts. Dit betekent dat de text chat nog steeds geopend kan worden. Om dit te voorkomen zullen die ook uitgezet moeten worden.
 
-Dit wordt gedaan in keyboard-mouse-user.js . In het code fragment is te zien hoe de shortcuts worden gedefinieerd. En dus ook verwijderd of met comments uitgezet worden. Of misschien met een boolean aan en uitgezet kan worden.
+Dit wordt gedaan in `keyboard-mouse-user.js` . In het code fragment is te zien hoe de shortcuts worden gedefinieerd. En dus ook verwijderd of met comments uitgezet worden. Of misschien met een boolean aan en uitgezet kan worden.
 
 ```TS
 {
@@ -231,3 +231,31 @@ shouldBeEnabled ? {
 
     }
 ```
+
+### Hubs features beschrijving
+#### text_chat
+![[Pasted image 20231002105351.png]]
+Keybinds: "t" en "/"
+#### voice_chat
+![[Pasted image 20231027091818.png]]
+Keybinds:
+#### allow_flying
+#### create_and_move_objects
+#### create_drawings
+#### create_emoji
+![[Pasted image 20231027091858.png]]
+Keybinds
+#### avatar_setup
+
+
+
+#### enter_on_device
+#### spectate
+#### teleport
+#### create_room
+#### change_name_&\_avatar
+#### favorite_rooms
+#### favorite_room
+#### close_room
+#### room_info_and_settings
+#### people_tab

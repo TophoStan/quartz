@@ -4,11 +4,11 @@
 *"Mozilla Hubs pusht een drastische verandering"* is wat ik in mijn risicoanalyse heb geschreven. En dit is waar geworden. Mijn opdracht was om met het hubs Cloud platform te werken, maar dit is sinds de update van de community edition gewijzigd om daar dus mee te werken. Dit betekent dat er een risico waar ik eigenlijk geen rekening mee had gehouden waar is geworden. Mijn opgedane kennis kan ik wel weer toe passen op de nieuwe editie, maar de tijd die ik in r&d gestopt heb, om het zo maar even te benoemen, is niet zo effectief geweest dus. 
 
 **Guides**
-Officieele
-- [Opstart process](https://hubs.mozilla.com/labs/community-edition-case-study-quick-start-on-gcp-w-aws-services/ )
+- [Opstart process](https://hubs.mozilla.com/labs/community-edition-case-study-quick-start-on-gcp-w-aws-services/ ) Google Cloud
+- 
 
 
-**Release**
+## **Release**
 [Github repo](https://github.com/mozilla/hubs-cloud/tree/master) van Mozilla hubs. Een mapje genaamd `community-edition` heeft de belangrijke bestanden voor het opzetten van een hubs-stack in zich bevinden. Er zijn de volgende bestanden aanwezig:
 - `cbb.sh` 
 - `cbb.yam`
@@ -83,3 +83,4 @@ Coturn zorgt ervoor dat er op de meest efficiënte en effectieve manier een P2P 
 [Bron](https://www.youtube.com/watch?v=_4FkRf9utSc) 
 ## **Huidige issue**
 De CORS server werkt op dit moment niet, dit betekent dat er geen nieuwe content geïmporteerd kan worden. 
+

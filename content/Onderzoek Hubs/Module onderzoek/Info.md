@@ -9,8 +9,6 @@ Een module heeft:
 - een versie
 - code
 
-
-
 ### Huidige problemen
 Het probleem wat zich nu voordoet op de werkvloer bij de ontwikkelaars van Boldly-XR, is dat eerder ontwikkelde features niet makkelijk overgebracht kunnen worden naar huidige of toekomstige projecten. 
 
