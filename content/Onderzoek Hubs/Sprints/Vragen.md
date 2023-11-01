@@ -8,4 +8,5 @@ Moeten oude projecten migreren en gebruik maken van de nieuwe structuur?
 Zijn Modules slechts voor de Hubs Client of ook andere applicaties in de Hubs-stack?
 *Voor nu alleen de Hubs Client*
 
-Wat moet er gebeuren wanneer je op de knop drukt van "Finalize"?
+
+## 31-10-2023

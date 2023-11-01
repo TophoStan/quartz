@@ -29,9 +29,12 @@ Vervolgens moet je het IP zoeken van de Loadbalancer, dit kan je doen door `kube
 - stream.DOMEIN 
 - cors.DOMEIN 
 
-Daarna moeten er certificaten worden toegevoegd, dit kan handmatig. MAAR het kan ook automatisch gedaan worden door CertBot. Hier volgt verdere uitleg over vanuit Hubs.
+Daarna moeten er certificaten worden toegevoegd, dit kan handmatig. MAAR het kan ook automatisch gedaan worden door CertBot. 
 
-
+Dit kan met behulp van het `cbb.sh` bestand. Dit bestand zorgt ervoor dat Certbot gaat draaien en je certificaten krijgt voor je domein. 
+**Zorg er wel voor dat je variabelen in het bestand goed staan**  
+`bash cbb.sh` om het bestand uit te voeren
+ 
 ## **Componenten nodig voor het draaien van Hubs Community Edition**
 - Reticulum
 - Spoke

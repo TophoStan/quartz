@@ -130,4 +130,4 @@ kubectl apply -f C:\dev\MozillaHubs\LocalEnv\hubs\azure.yaml # past YAML bestand
 
 
 ### **Lens**
-Lens is een GUI voor Kubernetes CLusters. Super handig, alleen is er nog niet veel gebruik van gemaakt door mij en kost een zakelijke abonnement geld. Als je de Kubectl CLI al in hebt gesteld met je online cluster op bijvboorbeld Azure, kan je gelijk aan de gang gaan.
+Lens is een GUI voor Kubernetes Clusters. Super handig, alleen is er nog niet veel gebruik van gemaakt door mij en kost een zakelijke abonnement geld. Als je de Kubectl CLI al in hebt gesteld met je online cluster op bijvboorbeld Azure, kan je gelijk aan de gang gaan.

@@ -6,14 +6,14 @@ kanban-plugin: basic
 
 ## Backlog
 
+- [ ] Custom image deployment documentatie
+- [ ] Package onderzoek
 - [ ] Diagram architectuur Hubs
-- [ ] Migratie onderzoek
 
 
 ## Todo
 
-- [ ] Package onderzoek
-- [ ] Custom image deployment documentatie
+- [ ] Google Cloud opzetten
 
 
 ## Finished
