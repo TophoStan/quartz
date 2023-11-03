@@ -9,4 +9,5 @@ Zijn Modules slechts voor de Hubs Client of ook andere applicaties in de Hubs-st
 *Voor nu alleen de Hubs Client*
 
 
-## 31-10-2023
+## 2-11-2023
+Op dit moment kan je bijvoorbeeld kiezen tussen Google Cloud of Localhost. En als je een optie kiest, wordt de instantie die op dat moment draait, overgeschreven met de waardes van de nieuwe installatie. Dit lijkt mij niet super handig. Dus mijn vraag aan jullie is, zou ik bijvoorbeeld iedere keer een nieuwe installatie moeten toepassen op een nieuwe `namespace`? Moet die optie er uberhaupt zijn? 

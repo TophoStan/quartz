@@ -29,7 +29,7 @@ In ToolbarCenter zit (in room)
 ![[Pasted image 20231002105351.png]]
 
 De inhoud van de toolbar staat gedefinieerd in de UI-root.js
-``` javascript
+```js
 toolbarCenter={
 
                   <>
@@ -352,6 +352,7 @@ Alle place acties
 
 Keybinds: 
 - "RightMousebutton" - Drop pen or camera
+- "p" - Equip pen
 - "Shift + E" / "Shift + Q" - Next/Previous Pen color
 - "Shift + {Mousewheel up/down}" - Pen size
 - "Ctrl + Z" - Undo pen stroke
@@ -365,6 +366,7 @@ De roomsettings in de sidebar `Create drawings` zorgt ervoor dat je deze functio
 
 Keybinds:
 - "RightMousebutton" - Drop pen or camera
+- "C" - Spawn een camera in
 ##### Place_GIF
 ![[Pasted image 20231101143544.png]]
 
