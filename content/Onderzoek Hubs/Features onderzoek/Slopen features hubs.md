@@ -247,6 +247,81 @@ shouldBeEnabled ? {
     }
 ```
 
+De waarde van deze boolean komt tot stand door de volgende env variable mee te geven, `turkeyCfg_features_to_enable`. Deze variablen kan waarden op de volgende manier opslaan. Bijvoorbeeld `turkeyCfg_features_to_enable="text_chat,voice_chat"`. Dit houdt in dat text en voicechat aan worden gezet tijdens het opstarten van de hubs installatie. Deze manier van het aan en uitzetten zorgt ervoor dat je geen code hoeft aan te passen en slechts de eerder benoemde `ternary-operator` hoeft toe te passen op de juiste plaats. De reden voor de `turkeyCfg` prefix komt uit het bestand `run.sh`. 
+``` powershell
+#cheatsheet
+#if [ -z ${var1+x} ]; then echo "is unset"; else echo " is set to '$var1'"; fi
+if [ -z ${turkeyCfg_thumbnail_server+x} ]; then export turkeyCfg_thumbnail_server="nearspark.reticulum.io"; fi
+if [ -z ${turkeyCfg_base_assets_path+x} ]; then export turkeyCfg_base_assets_path="https://$SUB_DOMAIN-assets.$DOMAIN/hubs/"; fi
+if [ -z ${turkeyCfg_non_cors_proxy_domains+x} ]; then export turkeyCfg_non_cors_proxy_domains="$SUB_DOMAIN.$DOMAIN,$SUB_DOMAIN-assets.$DOMAIN"; fi
+if [ -z ${turkeyCfg_reticulum_server+x} ]; then export turkeyCfg_reticulum_server="$SUB_DOMAIN.$DOMAIN"; fi
+if [ -z ${turkeyCfg_cors_proxy_server+x} ]; then export turkeyCfg_cors_proxy_server="$SUB_DOMAIN-cors.$DOMAIN"; fi
+if [ -z ${turkeyCfg_features_to_enable+x} ]; then export turkeyCfg_features_to_enable="default_value_for_features"; fi
+if [ -z ${turkeyCfg_shortlink_domain+x} ]; then export turkeyCfg_shortlink_domain="$SUB_DOMAIN.$DOMAIN"; fi
+if [ "$turkeyCfg_reticulum_server" = "$turkeyCfg_shortlink_domain" ]; then turkeyCfg_shortlink_domain="${turkeyCfg_shortlink_domain}/link"; fi
+if [ -z ${turkeyCfg_sentry_dsn+x} ]; then export turkeyCfg_sentry_dsn=""; fi
+if [ -z ${turkeyCfg_postgrest_server+x} ]; then export turkeyCfg_postgrest_server=""; fi
+# if [ -z ${turkeyCfg_ita_server+x} ]; then export turkeyCfg_ita_server=""; fi
+if [ -z ${turkeyCfg_ga_tracking_id+x} ]; then export turkeyCfg_ga_tracking_id=""; fi
+export turkeyCfg_ita_server="turkey"
+
+find /www/hubs/ -type f -name *.html -exec sed -i "s/{{rawhubs-base-assets-path}}\//${turkeyCfg_base_assets_path//\//\\\/}/g" {} \;           
+find /www/hubs/ -type f -name *.html -exec sed -i "s/{{rawhubs-base-assets-path}}/${turkeyCfg_base_assets_path//\//\\\/}/g" {} \; 
+find /www/hubs/ -type f -name *.css -exec sed -i "s/{{rawhubs-base-assets-path}}\//${turkeyCfg_base_assets_path//\//\\\/}/g" {} \; 
+find /www/hubs/ -type f -name *.css -exec sed -i "s/{{rawhubs-base-assets-path}}/${turkeyCfg_base_assets_path//\//\\\/}/g" {} \;             
+anchor="<!-- DO NOT REMOVE\/EDIT THIS COMMENT - META_TAGS -->" 
+for f in /www/hubs/pages/*.html; do 
+    for var in $(printenv); do 
+    var=$(echo $var | cut -d"=" -f1 ); prefix="turkeyCfg_"; 
+    [[ $var == $prefix* ]] && sed -i "s/$anchor/ <meta name=\"env:${var#$prefix}\" content=\"${!var//\//\\\/}\"\/> $anchor/" $f; 
+    done 
+done 
+
+if [ "${access_log}" = "enabled" ]; then sed -i "s/access_log off;//g" /etc/nginx/conf.d/default.conf; fi
+
+nginx -g "daemon off;"
+```
+
+Zelf heb ik de volgende regels toegevoegd om de features door te passen naar de Mozilla Hubs applicatie.
+``` Shell
+if [ -z ${turkeyCfg_features_to_enable+x} ]; then export turkeyCfg_features_to_enable="default_value_for_features"; fi
+```
+
+Maar hoe ontvangt de Hubs Client de environment variables? Deze worden, zoals te zien is in `run.sh`, respectievelijk in een \<\meta>-tag gezet op de `.html`-bestanden van Mozilla hubs.
+
+
+
+
+Dit bestand wordt aangeroepen in het Docker bestand `RetPageOriginDockerfile` die er als volgt uitziet.
+```Dockerfile
+from node:16.16 as builder
+run mkdir -p /hubs/admin/ && cd /hubs
+copy package.json ./
+copy package-lock.json ./
+run npm ci
+copy admin/package.json admin/
+copy admin/package-lock.json admin/
+run cd admin && npm ci --legacy-peer-deps && cd ..
+copy . .
+env BASE_ASSETS_PATH="{{rawhubs-base-assets-path}}"
+run npm run build 1> /dev/null
+run cd admin && npm run build 1> /dev/null && cp -R dist/* ../dist && cd ..
+run mkdir -p dist/pages && mv dist/*.html dist/pages && mv dist/hub.service.js dist/pages && mv dist/schema.toml dist/pages          
+run mkdir /hubs/rawhubs && mv dist/pages /hubs/rawhubs && mv dist/assets /hubs/rawhubs && mv dist/favicon.ico /hubs/rawhubs/pages
+from alpine/openssl as ssl
+run mkdir /ssl && openssl req -x509 -newkey rsa:2048 -sha256 -days 36500 -nodes -keyout /ssl/key -out /ssl/cert -subj '/CN=hubs'
+from nginx:alpine
+run apk add bash
+run mkdir /ssl && mkdir -p /www/hubs && mkdir -p /www/hubs/pages && mkdir -p /www/hubs/assets
+copy --from=ssl /ssl /ssl
+copy --from=builder /hubs/rawhubs/pages /www/hubs/pages
+copy --from=builder /hubs/rawhubs/assets /www/hubs/assets
+copy scripts/docker/nginx.config /etc/nginx/conf.d/default.conf
+copy scripts/docker/run.sh /run.sh
+run chmod +x /run.sh && cat /run.sh
+cmd bash /run.sh
+```
+
 ### Hubs features beschrijving
 #### Text_chat
 
@@ -360,7 +435,7 @@ Keybinds:
 De roomsettings in de sidebar `Create drawings` zorgt ervoor dat je deze functionaliteit aan of uit kan zetten!
 
 
-
+*Op dit moment nog niet stabiel bij het uitzetten van deze feature!*
 ##### Place_Camera
 ![[Pasted image 20231101143537.png]]
 
