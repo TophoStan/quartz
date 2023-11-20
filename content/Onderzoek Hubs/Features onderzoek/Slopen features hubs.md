@@ -289,9 +289,6 @@ if [ -z ${turkeyCfg_features_to_enable+x} ]; then export turkeyCfg_features_to_e
 
 Maar hoe ontvangt de Hubs Client de environment variables? Deze worden, zoals te zien is in `run.sh`, respectievelijk in een \<\meta>-tag gezet op de `.html`-bestanden van Mozilla hubs.
 
-
-
-
 Dit bestand wordt aangeroepen in het Docker bestand `RetPageOriginDockerfile` die er als volgt uitziet.
 ```Dockerfile
 from node:16.16 as builder
@@ -321,6 +318,54 @@ copy scripts/docker/run.sh /run.sh
 run chmod +x /run.sh && cat /run.sh
 cmd bash /run.sh
 ```
+
+De waarden van `turkeyCfg_features_to_enable` kan worden aangegeven in het `hcce.yam` worden aangegeven. Je leest het correct `.YAM` niet `.YAML`, waarom? Het `.YAM`-bestand moet aanduiden dat het bestand nog niet compleet is een nog variabelen er in heeft verwerkt
+
+``` YAML
+# Een ENV variable bij de Spoke Deployment
+- name: turkeyCfg_hubs_server
+          value: $HUB_DOMAIN
+# Bijvoorbeeld een certificaat dynamisch voor een domein genereren
+apiVersion: v1
+kind: Secret
+metadata:
+  name: cert-assets.$HUB_DOMAIN
+  namespace: $Namespace
+type: kubernetes.io/tls
+```
+
+
+Met behulp van de `handlebars`-lib en de volgende regex `/\$([a-zA-Z_]\w*)/g, '{{$1}}'` geeft ik aan dat variabelen die met de syntax die vanuit Hubs is meegegeven met het `$` teken worden omgezet naar `{{WAARDE}}`, omdat `handlebars` werkt met de {{}} syntax.
+
+``` ts
+const deploymentTemplatePath = 'src\\app\\api\\kubernetes\\deployment.template.YAM'
+    const yamlTemplate = fs.readFileSync(deploymentTemplatePath, 'utf8');
+
+
+    //Replace all $ variables with {{}} variables
+    const convertedVariablesYaml = yamlTemplate.replace(/\$([a-zA-Z_]\w*)/g, '{{$1}}');
+
+    const template = handlebars.compile(convertedVariablesYaml);
+
+
+
+    const data = {
+        HUB_DOMAIN: variables.HUB_DOMAIN,
+        Namespace: variables.Namespace,
+        ADM_EMAIL: 'WAARDE',
+        DB_USER: 'WAARDE',
+        DB_PASS: 'WAARDE',
+        DB_NAME: 'WAARDE',
+        DB_HOST: 'WAARDE',
+        DB_HOST_T: 'WAARDE',
+        PGRST_DB_URI: 'WAARDE',
+        PSQL: 'WAARDE',
+        SMTP_SERVER: 'WAARDE',
+        SMTP_PORT: 'WAARDE',
+        SMTP_USER: 'WAARDE'
+    }
+```
+
 
 ### Hubs features beschrijving
 #### Text_chat
