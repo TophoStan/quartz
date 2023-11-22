@@ -8,20 +8,20 @@ kanban-plugin: basic
 
 - [ ] Package onderzoek
 - [ ] Diagram architectuur Hubs
-- [ ] Place pen bug fixen
 - [ ] Hubs onderdelen aan en uit kunnen zetten afmaken
 
 
 ## Todo
 
-- [ ] Custom image deployment documentatie
-- [ ] Documentatie plaatsen op de plek waar het hoort
 - [ ] Documenteren flow applicatie/flowchart
 
 
 ## Finished
 
+- [ ] Custom image deployment documentatie
 - [ ] Google Cloud opzetten
+- [ ] Documentatie plaatsen op de plek waar het hoort
+- [ ] Place pen bug fixen
 - [ ] Vragen opstellen Albert Packages
 - [ ] Custom image hubs deployment
 - [ ] Postman voor zowel Google als Azure

@@ -517,12 +517,24 @@ Keybinds: "1","2","3","4","5","6","7"
 
 React kan aan- en/of uitgezet worden door `Create emoji` in de `Roomsettings` 
 #### avatar_setup
-#### enter_on_device
-#### spectate
-#### create_room
-#### change_name_&\_avatar
-#### favorite_rooms
-#### favorite_room
-#### close_room
-#### room_info_and_settings
-#### people_tab
+
+#### invite
+keybinds: geen
+Invite bevind zich op 2 plekken binnen `ui-root.js`.
+Eenmaal binnen 
+```ts
+ const moreMenu = [
+ ...,
+ {
+  id: "room",
+   toggleHubsFeatures("invite", configs.FEATURES_TO_ENABLE) ? (this.props.hub.entry_mode !== "invite" || this.props.hubChannel.can("update_hub")) && {
+              id: "invite",
+              label: <FormattedMessage id="more-menu.invite" defaultMessage="Invite" />,
+              icon: InviteIcon,
+              onClick: () => this.props.scene.emit("action_invite")
+ },
+ 
+ ]
+```
+
+`moreMenu` is een onderdeel van het menu wanneer je in een room bent.

@@ -1,0 +1,1 @@
+[[Lokaal Kubernetes cluster (MiniKube)]] legt uit hoe je een lokaal Kubernetes cluster op kan starten met behulp van MiniKube. 
