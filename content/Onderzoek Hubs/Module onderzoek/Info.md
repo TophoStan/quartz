@@ -26,6 +26,17 @@ Het Mozilla Hubs platform bestaat uit diverse applicaties en het gros daarvan is
 
 
 
+### Hoe zien deze eigen ontwikkelde onderdelen er uit?
+Het development team heeft meerdere projecten waarvoor op maat gemaakte onderdelen zijn ontwikkeld. De meest recente projecten zijn voor het Spookslot van de Efteling en een klant genaamd Westherts. Westherts college is een school in Watford, Verenigd Koninkrijk. 
+
+Tijdens het bekijken van de ontwikkelde onderdelen zijn een paar dingen eruit gesprongen. De broncode van deze onderdelen staat altijd in een mapje `BoldlyXR` in de `/src` map.
+
+
+
+
+
+
+
 
 
 ### Mogelijke oplossingen
@@ -42,4 +53,4 @@ Al is het gelukt om oude broncode in een package te zetten. Hoe zal je het voor 
 
 
 ### Wat is het proces achter een Module?
-In de woorden van Albert: *'Je pusht iets naar een repository en op een of andere manier als ergens op drukt poept die een package uit'* 
+In de woorden van Albert: *'Je pusht iets naar een repository en op een of andere manier als je ergens op drukt poept die een package uit'* 

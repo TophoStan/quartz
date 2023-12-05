@@ -96,3 +96,51 @@ Vervolgens kan je dit checken door op je containerregister te kijken zoals
 https://hub.docker.com/
 ![[Pasted image 20231120150738.png]]
 
+Nu staat deze repository echter publiek. De volgende stappen zijn nodig om het prive te zetten. 
+1. Klik op je repository die je net aangemaakt hebt
+2. Ga naar settings
+3. Onder visibility settings -> Make private
+
+
+Om een private image van Docker hub te kunnen pullen moet je de volgende stappen ondernemen
+1. Voer het onderstaande commando uit, maar vervang wel  `YOUR_USERNAME`, `YOUR_PASSWORD`, `YOUR_EMAIL` en `NAMESPACE`
+``` bash 
+kubectl create secret docker-registry my-dockerhub-secret \
+  --docker-server=https://index.docker.io/v1/ \
+  --docker-username=YOUR_USERNAME \
+  --docker-password=YOUR_PASSWORD \
+  --docker-email=YOUR_EMAIL
+  -n NAMESPACE
+```
+
+2. Voeg deze regel toe onder de `spec:` in het `hcce.yam` bestand
+``` YAML
+imagePullSecrets:
+      - name: my-dockerhub-secret
+```
+
+Voorbeeld:
+``` yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: YOUR_USERNAME/your-private-image:tag
+      imagePullSecrets: 
+      - name: my-dockerhub-secret
+```
+
+3. Verwijder voor de zekerheid eerst de oude deployment door `kubectl delete deployment -n hcce DEPLOYMENT_NAAM`
+4. Pas deze verandering toe door `bash render_hcce.sh && kubectl apply -f hcce.yaml` te doen

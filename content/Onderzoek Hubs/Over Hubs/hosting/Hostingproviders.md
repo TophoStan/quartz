@@ -68,4 +68,3 @@ Vervolgens kan je kiezen welke deployment je wil aanpassen op basis van een zoge
 Je kan ook een namespace aanmaken, maar deze moet wel in allemaal lowercase zijn zonder speciale tekens!
 
 ![[Pasted image 20231122155456.png]]
-
