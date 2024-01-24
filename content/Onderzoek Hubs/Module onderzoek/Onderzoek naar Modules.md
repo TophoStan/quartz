@@ -5,9 +5,9 @@ Een module is een stuk code dat op een `npm`-achtige wijze geïnstalleerd kan wo
 ### Waar bestaat een Module uit?
 Een module heeft:
 - een Naam
-- een readMe
 - een versie
-- code
+- bestanden
+- een configuratiebestand
 
 ### Huidige problemen
 Het probleem wat zich nu voordoet op de werkvloer bij de ontwikkelaars van Boldly-XR, is dat eerder ontwikkelde features niet makkelijk overgebracht kunnen worden naar huidige of toekomstige projecten. 

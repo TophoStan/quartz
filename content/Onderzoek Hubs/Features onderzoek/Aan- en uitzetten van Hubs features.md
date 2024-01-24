@@ -199,7 +199,7 @@ LET OP: Ook in keyboard-debugging.js staan een paar shortcuts voor emojis/reacti
 
 ### Room settings
 ![[Pasted image 20231031092709.png]]
-In de room settings zitten ook onderdelen verwerkt. Dit zijn de [[Slopen features hubs#text_chat]] & text chat. 
+In de room settings zitten ook onderdelen verwerkt. Dit zijn de [[Aan- en uitzetten van Hubs features#text_chat]] & text chat. 
 
 ### **Potentiële mogelijkheden**
 Er zijn verschillende aanpakken die gebruikt kunnen worden.
@@ -517,8 +517,9 @@ Keybinds: "1","2","3","4","5","6","7"
 
 React kan aan- en/of uitgezet worden door `Create emoji` in de `Roomsettings` 
 #### avatar_setup
+NOG NIET GEIMPLEMENTEERD
 
-#### invite
+#### Invite
 keybinds: geen
 Invite bevind zich op 2 plekken binnen `ui-root.js`.
 Eenmaal binnen 

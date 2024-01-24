@@ -98,6 +98,9 @@ namespace.match(/^[a-z0-9]([-a-z0-9]*[a-z0-9])?$/) && serviceAccount != null)
 ![[Pasted image 20240124103735.png]]
 
 Na het invoeren van alle velden gaat de `Features` knop van grijs
+
 ![[Pasted image 20240124104301.png]]
+
 naar
+
 ![[Pasted image 20240124104309.png]]

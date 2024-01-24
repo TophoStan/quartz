@@ -2,7 +2,7 @@
 tag: XR, VR
 ---
 
-Hubs is een gereedschap waarmee virtuele ruimtes mee gecreëerd kunnen worden in je browser die [[VR (Virtual Reality)]] en [[XR (Extended Reality)]] ondersteund. Er is geen app-store of installatie vereist om hiervan gebruik te kunnen maken. Gebaseerd op WebXR standaarden
+Hubs is een gereedschap waarmee virtuele ruimtes mee gecreëerd kunnen worden in je browser die [[VR (Virtual Reality)]] en [[XR (Extended Reality)]] ondersteund. Er is geen app-store of installatie vereist om hiervan gebruik te kunnen maken. Want het is gebaseerd op WebXR standaarden.
 
 In Hubs kan een Room aangemaakt worden
 Een Room is een eigen virtuele ruimte.

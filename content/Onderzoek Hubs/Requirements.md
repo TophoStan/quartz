@@ -16,7 +16,7 @@ Hier moet er gekozen kunnen worden waar je wilt hosten, zoals Azure, AWS of loca
 - Kubernetes
 
 **Hubs features toggle**
-Er kan met behulp van het door passen van environment variabelen keuze worden gemaakt welke modules aan of uitgezet worden. Dit is in detail uitgewerkt in [[Slopen features hubs]]. De pagina zelf is uitgerust met een paar check- of toggleboxen waarmee features, slechts tijdens installatie aan of uit gezet kunnen worden. 
+Er kan met behulp van het door passen van environment variabelen keuze worden gemaakt welke modules aan of uitgezet worden. Dit is in detail uitgewerkt in [[Aan- en uitzetten van Hubs features]]. De pagina zelf is uitgerust met een paar check- of toggleboxen waarmee features, slechts tijdens installatie aan of uit gezet kunnen worden. 
 
 **Module installatie (custom features)**
 Hier heb ik nog niet eerder mee gewerkt of überhaupt ooit over nagedacht. Maar Albert kwam wel met een suggestie. Je kan het zien als een git repository, bijvoorbeeld Github, waarop je branches maakt van versiebeheer. Vervolgens kan je ergens op klikken en in woorden van Albert, wordt er een package "uitgepoept" die gebruikt kan worden in de Hubs applicatie.
