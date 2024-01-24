@@ -1,10 +1,11 @@
 
-
+Op deze pagina wordt de frontend doorgenomen, met betrekking tot hoe een gebruiker de app zou gebruiken. Voor meer gedetailleerde informatie zijn er specifieke hoofdstukken per pagina beschikbaar.
 ## Frontend
 Na het opstarten van de applicatie kan je daar naartoe gaan, als deze lokaal staat kan je naar http://localhost:3000. Waar je vervolgens naar de home pagina wordt gestuurt op `/app/`. 
 
 ![[Pasted image 20231122150150.png]]
 
+### Hosting
 Na het klikken op de knop rechts onderin, wordt je doorgestuurd naar de `hosting` pagina. 
 ![[Pasted image 20231122150836.png]]
 
@@ -57,6 +58,26 @@ Vervolgens kan je doorklikken als alle velden voldoen aan de criteria
 
 ![[Pasted image 20231123105850.png]]
 
+
+### Features
+Nadat je valide gegevens ingevuld hebt op de hosting-pagina, kan je door naar de features-pagina.
+![[Pasted image 20240116101905.png]]
+
+Op deze pagina is een lijst met checkboxes aanwezig. Een checkbox staat voor een ingebouwd onderdeel van de Hubs Client. Wanneer een checkbox aangevinkt is, wordt deze dus aangezet in de hubs client. Je ingevulde keuzes worden net als bij de hosting in Local Storage gezet, om deze later in de applicatie weer op te halen. Je keuze wordt pas in localstorage gezet wanneer je naar de volgende pagina gaat.
+
+**Modules**
+![[Pasted image 20240116102327.png]]
+De module pagina bestaat uit een lijst van, je raad het, modules. De naam van de module met een beschrijving staan daarin verwerkt, met een versie. Na uiteindelijk op finalise te drukken, worden de modules gedownload van Drive en worden deze na het clonen van een Hubs Repo daarin gezet met import statements in externe bestanden als dat nodig is. Meer details in [[Module oplossing]] hoe dit process in zijn werking gaat. 
+
+**Summary**
+
+![[Pasted image 20240116102651.png]]
+Vervolgens kom je op de summary-pagina, waarop je je domein moet invoeren die je voor je Mozilla Hubs stack wilt gebruiken. Het gebruik van een domein is een vereiste! Daarnaast krijg je een overzicht van je ingevulde keuzes bij de hosting, features en modules pagina's. 
+
+**Created**
+Na zeker te weten je instantie aan te willen maken door op "create" te drukken, kom je op de "created" pagina. Deze pagina maakt op de achtergrond je instantie aan met de ingevulde keuzes van het hosting platform, features die aan/uit staan. Dit proces kan 1 of meerdere minuten duren.
+![[Pasted image 20240117162546.png]]
+Uiteindelijk krijg je een scherm te zien met informatie als het IP-adres waarnaar gewezen moet worden door het domein. Na deze stap kan weer genavigeerd worden naar de home pagina.
 
 ## API
 Zowel de frontend als de backend is in het NextJS framework geschreven. De developers bij Boldly hebben al veelal gebruik gemaakt van React en NextJS, dus was de keuze vanzelfsprekend. De API bestaat heeft verschillende routes, elke route met hun eigen doel. Tevens beschikt de API ook over documentatie te vinden op de `/docs` endpoint.
@@ -122,3 +143,6 @@ Vervolgens haal je met de endpoint namespaces op die in het cluster aanwezig zij
 
 ##### kubernetes/deployment
 Deze endpoint verzorgt de data omtrent het aanpassen van een draaiende hubs oplossing. Je geeft in je body mee welke onderdelen van de Hubs Client je aan of uit wil hebben en deze worden toegepast op de de deployment en de huidige draaiende pods relaterend aan die pod worden verwijderd, waarna een nieuwe automatisch door Kubernetes opgestart wordt. Het opmerkelijke aan deze endpoint is dat het rond de minuut kan duren voordat je een response krijgt.
+
+##### kubernetes/namespaces
+Deze endpoint haalt alle 
