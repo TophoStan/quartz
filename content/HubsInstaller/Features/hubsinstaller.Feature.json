@@ -1,0 +1,104 @@
+[{
+  "_id": {
+    "$oid": "655ccfa5d3571382c54b8433"
+  },
+  "name": "text_chat",
+  "description": "Text chat in the rooms",
+  "image": "https://i.imgur.com/r2noG3i.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745d4"
+  },
+  "name": "voice_chat",
+  "description": "Voice chat for talking in a room also removes the promting of audio devices",
+  "image": "https://i.imgur.com/FNOy6kU.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745d5"
+  },
+  "name": "flying",
+  "description": "Allows the feature to fly in a room",
+  "image": "https://i.imgur.com/8InkSgg.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745d6"
+  },
+  "name": "place_upload",
+  "description": "Allows users to upload",
+  "image": "https://i.imgur.com/pONdUyv.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745d7"
+  },
+  "name": "place_pen",
+  "description": "Allows users to draw",
+  "image": "https://i.imgur.com/Fq6srXv.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745d8"
+  },
+  "name": "place_camera",
+  "description": "Allows users to place a camera to record",
+  "image": "https://i.imgur.com/K3ydsPo.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745d9"
+  },
+  "name": "place_gif",
+  "description": "Allows users to place gifs",
+  "image": "https://i.imgur.com/IM2jtkS.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745da"
+  },
+  "name": "place_3dmodel",
+  "description": "Allows users to load in 3d-content",
+  "image": "https://i.imgur.com/Rg1OqkH.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745db"
+  },
+  "name": "place_avatar",
+  "description": "Allows users to place avatars for other users to use",
+  "image": "https://i.imgur.com/PDWjoXo.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745dc"
+  },
+  "name": "place_scene",
+  "description": "Allows users to place other scenes in a room",
+  "image": "https://i.imgur.com/L4FXAtq.png"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745dd"
+  },
+  "name": "teleport",
+  "description": "Allows users to teleport with the right mouse button",
+  "image": "https://bigthink.com/wp-content/uploads/2021/01/origin-77.jpg?w=640"
+},
+{
+  "_id": {
+    "$oid": "655ddaad5f3863c9f62745de"
+  },
+  "name": "react",
+  "description": "Allows users to react with emoji",
+  "image": "https://i.imgur.com/Odq1bwD.png"
+},
+{
+  "_id": {
+    "$oid": "656071f4f0a2e75bec906652"
+  },
+  "name": "invite",
+  "description": "button that enables users to invite eachother with a link",
+  "image": "https://i.imgur.com/urjEMVj.png"
+}]

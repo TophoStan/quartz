@@ -14,6 +14,8 @@ kanban-plugin: basic
 - [ ] ModuleInfo.json's maken voor andere 'modules'
 - [ ] Quartz headers aanpassen (tags)
 - [ ] BUG FIX: Import statements backend require
+- [ ] Exporteren data mongoDB
+- [ ] ENV bestand maken
 
 
 ## Todo

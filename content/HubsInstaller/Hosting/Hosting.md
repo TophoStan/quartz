@@ -86,6 +86,7 @@ Het moment dat er geen namespaces aanwezig op het cluster, is het slechts mogeli
 ##### `ReplaceNamespace`
 Op het moment dat een namespace geselecteerd is, wordt de `currentNamespace` gezet naar de naam van de gekozen namespace. Ook wordt deze in `Localstorage` gezet.
 `purpose = replace`
+
 ![[Pasted image 20240124103718.png]]
 
 ##### `CreateNamespaceInput`
@@ -95,6 +96,7 @@ namespace.match(/^[a-z0-9]([-a-z0-9]*[a-z0-9])?$/) && serviceAccount != null)
 ```
 
 `purpose = create`
+
 ![[Pasted image 20240124103735.png]]
 
 Na het invoeren van alle velden gaat de `Features` knop van grijs
@@ -104,3 +106,8 @@ Na het invoeren van alle velden gaat de `Features` knop van grijs
 naar
 
 ![[Pasted image 20240124104309.png]]
+
+
+Het eindresultaat in de Localstorage
+
+![[Pasted image 20240124113948.png]]
