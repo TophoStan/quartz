@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **Spoke Configuration in Kubernetes** 
 
 This Kubernetes YAML configuration deploys the Spoke application in the "hcce" namespace. Spoke is an integral component of your infrastructure, and this configuration file provides essential details for its deployment.

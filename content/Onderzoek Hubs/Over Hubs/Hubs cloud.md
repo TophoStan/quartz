@@ -1,4 +1,8 @@
-#hubs 
+---
+tags:
+  - ce
+  - hubs
+---
 https://hubs.mozilla.com/docs/hubs-query-string-parameters.html 
 https://hubs.mozilla.com/labs/professional-plan-and-community-edition
 

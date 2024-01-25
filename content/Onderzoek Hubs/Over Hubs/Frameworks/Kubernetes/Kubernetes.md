@@ -1,4 +1,8 @@
-#hubs #kubernetes
+---
+tags:
+  - kubernetes
+  - ce
+---
 **Wat is Kubernetes**
 Kubernetes(K8S) is een open-source orkestratie platform dat is ontwikkeld door Google, maar wordt nu onderhouden door Cloud Native Computing Foundation. Kubernetes is een tool waarmee je deployment kan automatiseren, schalen kan automatiseren en ook het managen van containerized applicaties, zoals Docker. Het is een technologie die door veel cloud providers wordt ondersteund als Azure, Amazon en Google. Dit zorgt ervoor dat het aantrekkelijk is om hierin te investeren door de flexibiliteit van platform die het aanbied aan de ontwikkelaar.
 

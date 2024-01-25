@@ -1,4 +1,8 @@
-#hubs #ce
+---
+tags:
+  - ce
+  - hubs
+---
 16 oktober is er een nieuwe editie van Hubs gereleased. Deze editite moet het Hubs Cloud plan vervangen door meer toegang te geven door alle onderdelen van de applicatie zoals Reticulum. Deze was voorheen niet toegankelijk en puur de Hubs Client was aanpasbaar. 
 
 *"Mozilla Hubs pusht een drastische verandering"* is wat ik in mijn risicoanalyse heb geschreven. En dit is waar geworden. Mijn opdracht was om met het hubs Cloud platform te werken, maar dit is sinds de update van de community edition gewijzigd om daar dus mee te werken. Dit betekent dat er een risico waar ik eigenlijk geen rekening mee had gehouden waar is geworden. Mijn opgedane kennis kan ik wel weer toe passen op de nieuwe editie, maar de tijd die ik in r&d gestopt heb, om het zo maar even te benoemen, is niet zo effectief geweest dus. 

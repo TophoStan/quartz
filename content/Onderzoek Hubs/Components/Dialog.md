@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **Dialog Configuration in Kubernetes**
 
 This Kubernetes YAML configuration deploys the Dialog application in the "hcce" namespace. Dialog is a critical component of your infrastructure, and this configuration file provides essential details for its deployment.

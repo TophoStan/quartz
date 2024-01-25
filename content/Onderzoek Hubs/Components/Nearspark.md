@@ -1,5 +1,8 @@
-
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **Nearspark Configuration in Kubernetes**
 
 This Kubernetes YAML configuration deploys the "nearspark" application as a Deployment and Service in the "hcce" namespace. "nearspark" is used for the "nearspark" service.

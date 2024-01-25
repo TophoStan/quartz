@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **Photomnemonic Configuration in Kubernetes**
 
 This Kubernetes YAML configuration deploys the "photomnemonic" application as a Deployment and Service in the "hcce" namespace. "photomnemonic" is used for handling photo mnemonic services.

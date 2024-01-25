@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **Coturn Configuration in Kubernetes**
 
 This Kubernetes YAML configuration deploys the Coturn application in the "hcce" namespace. Coturn is a crucial component of your infrastructure, and this configuration file provides the necessary details for its deployment.

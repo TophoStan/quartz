@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **Reticulum Configuration in Kubernetes**
 
 This Kubernetes YAML configuration defines the deployment of the Reticulum application in the "hcce" namespace. Reticulum is a service that serves as an integral part of your infrastructure, and this configuration file provides various settings for it.

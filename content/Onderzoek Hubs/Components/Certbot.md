@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 ### **cbb rbac**
 
 This Kubernetes YAML configuration defines Role-Based Access Control (RBAC) settings for the "cbb-sa" ServiceAccount in the "hcce" namespace.

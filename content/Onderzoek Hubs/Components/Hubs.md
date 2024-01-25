@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **Hubs Configuration in Kubernetes**
 
 This Kubernetes YAML configuration deploys the Hubs application in the "hcce" namespace. Hubs is an essential component of your infrastructure, and this configuration file provides the necessary details for its deployment.

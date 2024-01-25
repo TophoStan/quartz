@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **pgbouncer Configuration in Kubernetes**
 
 This Kubernetes YAML configuration deploys "pgbouncer" as a Deployment and Service in the "hcce" namespace. "pgbouncer" is a connection pooler for PostgreSQL databases.

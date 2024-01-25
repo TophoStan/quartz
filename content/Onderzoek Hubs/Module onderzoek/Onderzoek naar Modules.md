@@ -1,4 +1,8 @@
-#hubs 
+---
+tags:
+  - ce
+  - hubs
+---
 # Wat is een module?
 Een module is een stuk code dat op een `npm`-achtige wijze geïnstalleerd kan worden in je applicatie. 
 

@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **Ingress Configuration in Kubernetes**
 
 This Kubernetes YAML configuration defines two Ingress resources in the "hcce" namespace for routing external traffic to the respective services.

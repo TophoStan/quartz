@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **PgSQL Configuration in Kubernetes**
 
 This Kubernetes YAML configuration deploys a PostgreSQL database as a Deployment and a Service in the "hcce" namespace.

@@ -1,4 +1,8 @@
-#hubs
+---
+tags:
+  - ce
+  - hubs
+---
 # **Haproxy Configuration in Kubernetes**
 
 This Kubernetes YAML configuration deploys the HAProxy application in the "hcce" namespace. HAProxy is a critical component of your infrastructure, and this configuration file provides essential details for its deployment.
