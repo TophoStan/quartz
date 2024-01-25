@@ -11,7 +11,9 @@ Modules staan opgeslagen in Google Drive. Het vereiste is dat je een map hebt di
 ![[Pasted image 20240116092024.png]]
 **ModuleInfo.json**
 Een moduleInfo bestand heeft altijd  `name: string`, `Version: string`, `codeLines: [codeLine]` als waardes. Een `codeLine` bevat `fileName: string`, `lineToBeAdded: string`, `beneath: string` en optioneel `replaceLine: "above" of "beneath"`. 
-Een voorbeeld van een ModuleInfo.JSON-bestand staat hieronder. Deze komt uit de `avatarSystem`-module.
+Een voorbeeld van een ModuleInfo.JSON-bestand staat hieronder. Deze komt uit de `avatarSystem`-module. 
+
+Een optionele waarde is `assets` die een array bevat met `fileName: string`. De waarde van `fileName` is de destinatie en het uiteindelijke bestand. Voorbeeld `src/assets/bxr/sfx/alarmclock.mp3`. 
 
 ``` JSON
 {
@@ -29,7 +31,28 @@ Een voorbeeld van een ModuleInfo.JSON-bestand staat hieronder. Deze komt uit de 
             "beneath": "{canCreateRooms && <CreateRoomButton />}",
             "replaceLine": "above"
         }
-    ]
+    ],
+    "assets": [
+        {
+            "fileName": "src/assets/bxr/sfx/alarmclock.mp3"
+        },
+        {
+            "fileName": "src/assets/bxr/sfx/correct.mp3"
+        },
+        {
+            "fileName": "src/assets/bxr/sfx/handclap.mp3"
+        },
+        {
+            "fileName": "src/assets/bxr/sfx/timerunningout.mp3"
+        },
+        {
+            "fileName": "src/assets/bxr/sfx/woodenhammer.mp3"
+        },
+        {
+            "fileName": "src/assets/bxr/sfx/wrong.mp3"
+        }
+        ]
+
 }
 ```
 

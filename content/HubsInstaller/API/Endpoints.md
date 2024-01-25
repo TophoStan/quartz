@@ -1,4 +1,4 @@
-Je kan deze tabel opnieuw genereren met het `generateMDTable.js` bestand.
+Je kan deze tabel opnieuw genereren met het `generateMDTable.js` bestand. Meer informatie over de endpoints zelf is vinden op `/app/docs` en over de klasse en functies die daarachter zitten, zijn er folders gemaakt met daarin de belangrijke informatie. Informatie is voor het gros geschreven met behulp of door chatGPT en Github Copilot.
 
 | Endpoint | Tag | HTTP Verb | Endpoint Summary |
 |----------|-----|-----------|------------------|
