@@ -88,6 +88,4 @@ PgSQL is een toevoeging op SQL, waarmee meer computationele stukken gebouwd kunn
 ### Coturn
 Coturn zorgt ervoor dat er op de meest efficiënte en effectieve manier een P2P verbinding vastgesteld kan worden. 
 [Bron](https://www.youtube.com/watch?v=_4FkRf9utSc) 
-## **Huidige issue**
-De CORS server werkt op dit moment niet, dit betekent dat er geen nieuwe content geïmporteerd kan worden. 
 

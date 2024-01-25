@@ -1,0 +1,7 @@
+- Bug fixes in [[Bugs]] oplossen
+- Aanmaken resterende modules. Op het moment van opleveren zijn slechts `SoundEffects` en `CreateHomePageDropdown` geëxtraheerd uit MetaCollege.
+- In `yamlTemplateFunctions` zijn `initCert`, `initKey` en `PGRST_JWT_SECRET` nog hardcoded. Het is geadviseerd om dit programmatisch te doen vanuit een security perspectief.
+- `avatar_setup` de Modal die voordat je een ruimte joint op het scherm komt te staan, is nog niet als feature geïmplementeerd.
+- De API heeft wel fout afhandelingen, maar is samen met de frontend ontwikkeld. Vandaar dat de kwaliteit van de fout afhandelingen minder aanwezig is op de API. Daarom raad ik af om direct API requests te doen en dit alleen te doen wanneer nodig.
+- Bij het vervangen van een Mozilla Hubs instantie wordt slechts de `Hubs` deployment aangepast
+- Op de `Modules` pagina wil het nog eens voorkomen dat een popup window niet goed sluit of nog een keer opent. Dit kan je negeren, het hindert de functionaliteit niet. Tevens is het zo dat dit moeilijk te repliceren valt.

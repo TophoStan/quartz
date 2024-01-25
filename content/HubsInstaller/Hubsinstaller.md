@@ -79,6 +79,12 @@ Na zeker te weten je instantie aan te willen maken door op "create" te drukken, 
 ![[Pasted image 20240117162546.png]]
 Uiteindelijk krijg je een scherm te zien met informatie als het IP-adres waarnaar gewezen moet worden door het domein. Na deze stap kan weer genavigeerd worden naar de home pagina.
 
+
+Na dit succesvol te hebben gedaan, moet er nog wel gekeken worden naar SSL. Dit kan met Certbotbot gedaan worden. Dit is in [[Community Edition#**Release**]]  besproken hoe dit kan.
+
+
+
+
 ## API
 Zowel de frontend als de backend is in het NextJS framework geschreven. De developers bij Boldly hebben al veelal gebruik gemaakt van React en NextJS, dus was de keuze vanzelfsprekend. De API bestaat heeft verschillende routes, elke route met hun eigen doel. Tevens beschikt de API ook over documentatie te vinden op de `/docs` endpoint.
 
