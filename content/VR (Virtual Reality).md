@@ -1,1 +1,0 @@
-Virtual Reality is een onderdeel van [[XR (Extended Reality)]] . 

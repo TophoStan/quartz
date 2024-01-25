@@ -1,1 +1,0 @@
-Een abstracte term die gebruikt wordt om het concept van AR, MR en VR algemeen te beschrijven. Het is in software architectuur de parent klasse van AR, MR en VR, wat dus de implementaties zijn van XR. 
