@@ -23,6 +23,7 @@ Op het moment van inladen van de pagina, wordt er gekeken of de waarde `replace`
 
 ### `getAllSelectedFeatures`
 Deze functie haalt alle aangevinkte waardes op en stopt deze in `localStorage` op `selectedFeatures`.
+
 ![[Pasted image 20240124114831.png]]
 
 ### `FeatureCheckBox`

@@ -7,8 +7,8 @@ Voor het ontwikkelen van een oplossing voor het makkelijk installeerbaar maken v
 - ModuleInfo.json
 
 **Waar staan modules opgeslagen?**
-Modules staan opgeslagen in Google Drive. Het vereiste is dat je een map hebt die 'hubsInstaller' heet. In dit mapje kan je dan de modules neerzetten. De folder structuur ziet er als volgt uit. De structuur van `HubsInstaller/MODULENAAM/VERSIE/....` moet aangehouden worden. De app zoekt namelijk binnen de `hubinstaller`-folder naar de modules. Tevens moet er ook altijd een ModuleInfo.json aanwezig zijn.
-![[Pasted image 20240116092024.png]]
+Modules staan opgeslagen in Google Drive. Het vereiste is dat je een map hebt die 'features' heet. In dit mapje kan je dan de modules neerzetten. De folder structuur ziet er als volgt uit. De structuur van `features/MODULENAAM/VERSIE/....` moet aangehouden worden. De app zoekt namelijk binnen de `features`-folder naar de modules. Tevens moet er ook altijd een ModuleInfo.json aanwezig zijn.
+![[Pasted image 20240126140949.png]]
 **ModuleInfo.json**
 Een moduleInfo bestand heeft altijd  `name: string`, `Version: string`, `codeLines: [codeLine]` als waardes. Een `codeLine` bevat `fileName: string`, `lineToBeAdded: string`, `beneath: string` en optioneel `replaceLine: "above" of "beneath"`. 
 Een voorbeeld van een ModuleInfo.JSON-bestand staat hieronder. Deze komt uit de `avatarSystem`-module. 

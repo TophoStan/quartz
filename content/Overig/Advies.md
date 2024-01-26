@@ -7,3 +7,4 @@
 - Op de `Modules` pagina wil het nog eens voorkomen dat een popup window niet goed sluit of nog een keer opent. Dit kan je negeren, het hindert de functionaliteit niet. Tevens is het zo dat dit moeilijk te repliceren valt.
 - Een systeem aanmaken om automatisch de YAML en Hubs client ergens op te slaan wanneer deze wordt gebouwd naar een Docker image voor versie beheer.
 - De applicatie zelf draait niet online, is tevens niet mogelijk vanwege het feit dat Docker op de hosting machine moet staan.
+- De mongoDB string staat er ook hardcoded in en wijst naar mijn persoonlijke database. De data die in de database moet staan, staat in `hubsinstaller.Feature.json`.

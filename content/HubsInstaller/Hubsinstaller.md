@@ -16,7 +16,8 @@ Voorbeeld van een mogelijk service account, in dit geval van Azure
 {                                                        
   "appId": "128638u12y3iou12osadjf98sadfsad89",       
   "password": "NF)*(#Y@*&RH#(*YHHJDSHFKJSJF*)",
-  "tenant": "jhasd-fsdafsa0-asdfassaf--asdf"       
+  "tenant": "jhasd-fsdafsa0-asdfassaf--asdf",
+  "subscriptionId": "827bv9ad7ybfpsd"       
 }                                                        
 ```
 Voorbeeld Google 
@@ -149,6 +150,3 @@ Vervolgens haal je met de endpoint namespaces op die in het cluster aanwezig zij
 
 ##### kubernetes/deployment
 Deze endpoint verzorgt de data omtrent het aanpassen van een draaiende hubs oplossing. Je geeft in je body mee welke onderdelen van de Hubs Client je aan of uit wil hebben en deze worden toegepast op de de deployment en de huidige draaiende pods relaterend aan die pod worden verwijderd, waarna een nieuwe automatisch door Kubernetes opgestart wordt. Het opmerkelijke aan deze endpoint is dat het rond de minuut kan duren voordat je een response krijgt.
-
-##### kubernetes/namespaces
-Deze endpoint haalt alle 
