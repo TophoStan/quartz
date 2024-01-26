@@ -3,5 +3,7 @@
 - In `yamlTemplateFunctions` zijn `initCert`, `initKey` en `PGRST_JWT_SECRET` nog hardcoded. Het is geadviseerd om dit programmatisch te doen vanuit een security perspectief.
 - `avatar_setup` de Modal die voordat je een ruimte joint op het scherm komt te staan, is nog niet als feature geïmplementeerd.
 - De API heeft wel fout afhandelingen, maar is samen met de frontend ontwikkeld. Vandaar dat de kwaliteit van de fout afhandelingen minder aanwezig is op de API. Daarom raad ik af om direct API requests te doen en dit alleen te doen wanneer nodig.
-- Bij het vervangen van een Mozilla Hubs instantie wordt slechts de `Hubs` deployment aangepast
+- Bij het vervangen van een Mozilla Hubs instantie wordt slechts de `Hubs` deployment aangepast. Al pas je dus de image aan tijdens het bijwerken van, bijvoorbeeld Reticulum, gebeurt er niks.
 - Op de `Modules` pagina wil het nog eens voorkomen dat een popup window niet goed sluit of nog een keer opent. Dit kan je negeren, het hindert de functionaliteit niet. Tevens is het zo dat dit moeilijk te repliceren valt.
+- Een systeem aanmaken om automatisch de YAML en Hubs client ergens op te slaan wanneer deze wordt gebouwd naar een Docker image voor versie beheer.
+- De applicatie zelf draait niet online, is tevens niet mogelijk vanwege het feit dat Docker op de hosting machine moet staan.

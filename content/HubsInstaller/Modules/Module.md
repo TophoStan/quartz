@@ -59,7 +59,7 @@ const [dockerImageName, setDockerImageName] = useState("")
 #### `useEffect`
 Binnen dit blok wordt gekeken of `dockerImageName` een waarde heeft, indien dat zo is `setCanGoToFinalise(true)`
 #### `cloneHubs`
-Stuurt een request naar `api/modules/clone` om de aangevinkte modules te downloaden en te plaatsen in een hubs project
+Stuurt een request naar `api/modules/clone` om de aangevinkte modules te downloaden en te plaatsen in een hubs project. De repo die gecloned wordt staat hardcoded in de backend.
 
 
 #### `valideSelectedModules`
