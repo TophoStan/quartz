@@ -44,10 +44,10 @@ in spec->template->spec->containers->image staan de volgende twee regels:
 	imagePullPolicy: IfNotPresent
 ```
 Als image staat hier een door Mozzilla onderhouden Docker repository met daarin `pgbouncer:stable-latest`. Je kan hier dus kiezen om je eigen repository toe te passen door deze regel aan te passen. Hiervoor moet je Docker container online beschikbaar staan op een Container Registry, dit kan op Docker zelf maar ook op Azure of andere platform. Een voorbeeld van een eigen image kan dus zijn
-`stantop/hubs-client:v1` of `boldlyxr/hubs-client-efteling:v1`. Na de `:` komt de tag. Deze kan je gebruiken voor onder andere versiebeheer, lokale mogelijkheden of ontwikkeldoeleinden. 
+`stantop/hubs-client:v1` of `boldlyxr/hubs-client-pretpark:v1`. Na de `:` komt de tag. Deze kan je gebruiken voor onder andere versiebeheer, lokale mogelijkheden of ontwikkeldoeleinden. 
 
 ### Hoe maak je een custom image
-Een custom image is gewoon een image. Dus wat dat betekent is dat je `docker build -t boldlyxr/hubs-client-efteling:dev -f <LOCATIE VAN DOCKERFILE> .` Vergeet de `.` niet. Deze geeft de context aan waar het Dockerfile op toegepast moet worden.  
+Een custom image is gewoon een image. Dus wat dat betekent is dat je `docker build -t boldlyxr/hubs-client-pretpark:dev -f <LOCATIE VAN DOCKERFILE> .` Vergeet de `.` niet. Deze geeft de context aan waar het Dockerfile op toegepast moet worden.  
 #### Hoe ziet een Dockerfile er uit?
 Een Dockerfile kan er als volgt uit zien:
 ```Dockerfile
@@ -88,10 +88,10 @@ cmd bash /run.sh
 Een Dockerfile bevat instructies over hoe een Docker applicatie gebuild en opgestart kan worden. Het bovenstaande voorbeeld is een Dockerfile dat door Mozilla Hubs wordt geleverd.  
 
 Wanneer je deze uitvoert met het volgende commando:
-`docker build -t boldlyxr/hubs-client-efteling:dev -f <LOCATIE VAN DOCKERFILE> .` Krijg je dus een image op boldlyxr/hubs-client. Nu staat deze lokaal, maar je wilt hem natuurlijk online hebben staan. Dit betekent dat je bij een container register zoals DockerHub een account moet maken genaamd `boldlyxr` als je nog geen account had. `boldlyxr` kan door elke willekeurige naam veranderd worden zolang je over dat account beschikt. 
+`docker build -t boldlyxr/hubs-client-pretpark:dev -f <LOCATIE VAN DOCKERFILE> .` Krijg je dus een image op boldlyxr/hubs-client. Nu staat deze lokaal, maar je wilt hem natuurlijk online hebben staan. Dit betekent dat je bij een container register zoals DockerHub een account moet maken genaamd `boldlyxr` als je nog geen account had. `boldlyxr` kan door elke willekeurige naam veranderd worden zolang je over dat account beschikt. 
 
 #### Hoe zet ik mijn docker image online
-Het commando `docker push boldlyxr/hubs-client-efteling:dev` pusht je image naar het huidig geselecteerde container register (standaard is dit DockerHub). 
+Het commando `docker push boldlyxr/hubs-client-pretpark:dev` pusht je image naar het huidig geselecteerde container register (standaard is dit DockerHub). 
 Vervolgens kan je dit checken door op je containerregister te kijken zoals
 https://hub.docker.com/
 ![[Pasted image 20231120150738.png]]
